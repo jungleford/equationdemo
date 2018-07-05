@@ -1,6 +1,6 @@
 import path from 'path';
 import webpack from 'webpack';
-import HtmlWebpackPlugin from 'html-webpack-plugin'
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const root = path.resolve(__dirname);
 
@@ -23,6 +23,13 @@ const babelQuery = {
 };
 
 export default {
+  /*node: {
+    fs: 'empty',
+    net: 'empty',
+    tls: 'empty',
+    child_process: 'empty'
+  },*/
+  //target: 'node',
   mode: 'development',
   devtool: 'source-map',
   entry: ['babel-polyfill', path.join(root, 'examples', 'js', 'app.jsx')],
@@ -53,6 +60,10 @@ export default {
     moduleExtensions: ['-loader']
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      _: 'lodash'
+    }),
     // Generates an `index.html` file with the <script> injected.
     new HtmlWebpackPlugin({
       template: path.join(root, 'examples', 'index.html'),

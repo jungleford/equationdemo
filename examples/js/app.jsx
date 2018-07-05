@@ -1,14 +1,12 @@
 import React from 'react';
 import createReactClass from 'create-react-class';
 import ReactDOM from 'react-dom';
-import service from './service';
-import $ from 'jquery';
+
+import {SquareRoot} from "./components";
 
 let App = createReactClass({
   render() {
-    let value = service();
-
-    return <span>{ value.toString() }</span>;
+    return <SquareRoot />;
   }
 });
 
