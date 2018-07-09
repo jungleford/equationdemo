@@ -5,6 +5,7 @@ export default (a, b, c) => {
   let equation = new Equation(algebra.parse(expression), algebra.parse('0'));
 
   return {
+    expression: expression,
     equation: expression + '=0',
     formula: 'x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}',
     x: equation.solveFor('x').toString()

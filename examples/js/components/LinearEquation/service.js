@@ -5,6 +5,7 @@ export default (a, b) => {
   let equation = new Equation(algebra.parse(expression), algebra.parse('0'));
 
   return {
+    expression: expression,
     equation: expression + '=0',
     formula: 'x = -{b \\over a}',
     x: equation.solveFor('x').toTex()

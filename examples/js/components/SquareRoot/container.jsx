@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import service from './service';
 
 export default class SquareRoot extends Component {
@@ -7,7 +8,11 @@ export default class SquareRoot extends Component {
     let result = service(value);
 
     return (
-      <p>{ 'The square root of \\(' + value + '\\) is: $$' + result + '$$' }</p>
+      <div>
+        <h1>Quadratic Equation</h1>
+        <p>{ 'The square root of \\(' + value + '\\) is: $$' + result + '$$' }</p>
+        <hr/>
+      </div>
     );
   }
 }
