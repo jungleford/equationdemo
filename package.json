@@ -20,6 +20,7 @@
     "start": "start npm run hot && npm run dev"
   },
   "dependencies": {
+    "algebra.js": "^0.2.6",
     "babel-polyfill": "^6.26.0",
     "create-react-class": "^15.6.3",
     "express": "^4.16.3",

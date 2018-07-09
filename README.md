@@ -1,2 +1,2 @@
 # equationdemo
-A personal demo for using MathJS and MathJax
+A personal demo for using MathJS, Algebra.js and MathJax

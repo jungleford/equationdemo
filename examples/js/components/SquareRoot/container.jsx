@@ -7,7 +7,7 @@ export default class SquareRoot extends Component {
     let result = service(value);
 
     return (
-      <p>{ 'The square root of ' + value + ' is: ' + result }</p>
+      <p>{ 'The square root of \\(' + value + '\\) is: $$' + result + '$$' }</p>
     );
   }
 }

@@ -2,11 +2,17 @@ import React from 'react';
 import createReactClass from 'create-react-class';
 import ReactDOM from 'react-dom';
 
-import {SquareRoot} from "./components";
+import {SquareRoot, LinearEquation, QuadraticEquation} from "./components";
 
 let App = createReactClass({
   render() {
-    return <SquareRoot />;
+    return (
+      <div>
+        <SquareRoot />
+        <LinearEquation />
+        <QuadraticEquation />
+      </div>
+    );
   }
 });
 
