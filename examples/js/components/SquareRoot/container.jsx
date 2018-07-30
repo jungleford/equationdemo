@@ -9,8 +9,8 @@ export default class SquareRoot extends Component {
 
     return (
       <div>
-        <h1>Quadratic Equation</h1>
-        <p>{ 'The square root of \\(' + value + '\\) is: $$' + result + '$$' }</p>
+        <h1>Square Root</h1>
+        <p>{ 'The square root of \\(' + value + '\\) is: ' + result }</p>
         <hr/>
       </div>
     );

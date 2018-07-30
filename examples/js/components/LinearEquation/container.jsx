@@ -17,7 +17,7 @@ export default class LinearEquation extends Component {
     return (
       <div>
         <h1>Linear Equation</h1>
-        <p>{ 'When \\(a \\ne 0\\), the solution to \\(ax+b=0\\) is $$' + result.formula + '$$ Now \\(a=' + a + '\\), \\(b=' + b + '\\). The solution to \\(' + result.equation + '\\) are $$x=' + result.x + '$$' }</p>
+        <p>{ 'When ' + result.constraints + ', the solution to ' + result.eqFormula + ' is ' + result.formula + ' Now \\(a=' + a + '\\), \\(b=' + b + '\\). The solution to ' + result.equation + ' are ' + result.xFormat }</p>
         <div style={{display: 'flex', justifyContent: 'center'}}>
           <Plot
             data={[
@@ -29,7 +29,21 @@ export default class LinearEquation extends Component {
                 marker: {color: 'red'},
               }
             ]}
-            layout={ {width: 320, height: 240, title: 'Linear Function: y=' + result.expression} }
+            layout={
+              {
+                yaxis: {scaleanchor: 'x'},
+                width: 320,
+                height: 480,
+                title: 'Linear Function: y=' + result.expression,
+                annotations: [
+                  {
+                    x: result.x,
+                    y: 0,
+                    text: 'x=' + result.x
+                  }
+                ]
+              }
+            }
             config={ {displayModeBar: false} }
           />
         </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import createReactClass from 'create-react-class';
 import ReactDOM from 'react-dom';
 
-import {SquareRoot, LinearEquation, QuadraticEquation} from "./components";
+import {SquareRoot, LinearEquation, QuadraticEquation, LinearEquationSet} from "./components";
 
 let App = createReactClass({
   render() {
@@ -11,6 +11,7 @@ let App = createReactClass({
         <SquareRoot />
         <LinearEquation />
         <QuadraticEquation />
+        <LinearEquationSet />
       </div>
     );
   }
