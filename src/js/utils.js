@@ -78,7 +78,10 @@ const decimalToFraction = (decimal) => {
  * @returns {number}
  */
 const fractionToDecimal = (fraction) => {
-  if (fraction instanceof Fraction || fraction instanceof Expression) {
+  if (typeof fraction === 'number') {
+    return fraction;
+  }
+  else if (fraction instanceof Fraction || fraction instanceof Expression) {
     fraction = fraction.toString();
   } else if (typeof fraction !== 'string') {
     throw new TypeError('Invalid Argument: the argument must be a fraction.');

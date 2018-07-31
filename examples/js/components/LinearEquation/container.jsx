@@ -14,6 +14,14 @@ export default class LinearEquation extends Component {
       return expression.eval({x: x});
     });
 
+    let steps = [], i = 0;
+    result.steps.forEach(step => {
+      step.forEach(substep => { steps.push(<li key={i++}>{'\\(' + substep + '\\)'}</li>); });
+    });
+    if (steps.length === 0) {
+      steps.push(<li>{'Formula: \\(' + result.formula +'\\)'}</li>)
+    }
+
     return (
       <div>
         <h1>Linear Equation</h1>
@@ -47,6 +55,8 @@ export default class LinearEquation extends Component {
             config={ {displayModeBar: false} }
           />
         </div>
+        <h3>Solving Steps</h3>
+        <ul>{ steps }</ul>
         <hr/>
       </div>
     );
