@@ -14,7 +14,7 @@ export default (a, b, c) => {
   });
 
   return {
-    constraints: '\\(a \\ne 0\\)',
+    constraints: '\\(a \\ne 0, \\Delta = b^2 - 4ac \\ge 0\\)',
     eqFormula: '\\(ax^2 + bx + c = 0\\)',
     formula: '$$x = {-b \\pm \\sqrt{b^2 - 4ac} \\over 2a}$$',
     expression: expression,
